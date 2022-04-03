@@ -32,6 +32,7 @@ namespace _01._04._2022
             this.name = new System.Windows.Forms.Label();
             this.reg = new System.Windows.Forms.TextBox();
             this.start = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
@@ -46,14 +47,15 @@ namespace _01._04._2022
             // 
             // reg
             // 
+            this.reg.AllowDrop = true;
             this.reg.Location = new System.Drawing.Point(95, 95);
             this.reg.Name = "reg";
-            this.reg.ReadOnly = true;
             this.reg.Size = new System.Drawing.Size(229, 20);
             this.reg.TabIndex = 1;
             // 
             // start
             // 
+            this.start.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.start.Location = new System.Drawing.Point(95, 191);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(149, 54);
@@ -62,12 +64,24 @@ namespace _01._04._2022
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
+            // Exit
+            // 
+            this.Exit.Location = new System.Drawing.Point(95, 263);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(149, 50);
+            this.Exit.TabIndex = 3;
+            this.Exit.Text = "Выход";
+            this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(384, 343);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.start);
             this.Controls.Add(this.reg);
             this.Controls.Add(this.name);
@@ -84,6 +98,7 @@ namespace _01._04._2022
         private System.Windows.Forms.Label name;
         public System.Windows.Forms.Button start;
         public System.Windows.Forms.TextBox reg;
+        private System.Windows.Forms.Button Exit;
     }
 }
 

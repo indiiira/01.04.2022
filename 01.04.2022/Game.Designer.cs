@@ -57,13 +57,13 @@ namespace _01._04._2022
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.time1 = new System.Windows.Forms.Label();
             this.time2 = new System.Windows.Forms.Label();
             this.time3 = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             this.panelgame.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -415,21 +415,13 @@ namespace _01._04._2022
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(543, 499);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "timer";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 502);
+            this.textBox1.Location = new System.Drawing.Point(16, 499);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(94, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Visible = false;
             // 
             // textBox2
             // 
@@ -437,6 +429,7 @@ namespace _01._04._2022
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
@@ -444,51 +437,67 @@ namespace _01._04._2022
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 4;
+            this.textBox3.Visible = false;
             // 
             // time1
             // 
             this.time1.AutoSize = true;
-            this.time1.Location = new System.Drawing.Point(39, 476);
+            this.time1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time1.Location = new System.Drawing.Point(38, 501);
             this.time1.Name = "time1";
-            this.time1.Size = new System.Drawing.Size(32, 13);
+            this.time1.Size = new System.Drawing.Size(44, 18);
             this.time1.TabIndex = 5;
             this.time1.Text = "time3";
             // 
             // time2
             // 
             this.time2.AutoSize = true;
-            this.time2.Location = new System.Drawing.Point(149, 476);
+            this.time2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time2.Location = new System.Drawing.Point(156, 504);
             this.time2.Name = "time2";
-            this.time2.Size = new System.Drawing.Size(32, 13);
+            this.time2.Size = new System.Drawing.Size(44, 18);
             this.time2.TabIndex = 6;
             this.time2.Text = "time2";
             // 
             // time3
             // 
             this.time3.AutoSize = true;
-            this.time3.Location = new System.Drawing.Point(290, 476);
+            this.time3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time3.Location = new System.Drawing.Point(295, 504);
             this.time3.Name = "time3";
-            this.time3.Size = new System.Drawing.Size(32, 13);
+            this.time3.Size = new System.Drawing.Size(44, 18);
             this.time3.TabIndex = 7;
             this.time3.Text = "time3";
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(793, 488);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(131, 34);
+            this.exit.TabIndex = 8;
+            this.exit.Text = "Выход";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1018, 534);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.time3);
             this.Controls.Add(this.time2);
             this.Controls.Add(this.time1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelgame);
+            this.MaximizeBox = false;
             this.Name = "Game";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-          
+            this.TopMost = true;
             this.panelgame.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -523,12 +532,12 @@ namespace _01._04._2022
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TableLayoutPanel panelgame;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label time1;
         private System.Windows.Forms.Label time2;
         private System.Windows.Forms.Label time3;
+        private System.Windows.Forms.Button exit;
     }
 }
